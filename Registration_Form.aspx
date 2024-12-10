@@ -112,14 +112,16 @@
             <!-- Registration Date (Read-Only) -->
             <div class="form-group">
                 <label for="txtRegistrationDate">Registration Date</label>
-                <input type="text" id="txtRegistrationDate" runat="server" readonly value="<%= DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") %>" />
+              <input type="text" id="txtRegistrationDate" runat="server" readonly />
+
             </div>
             
             <!-- Submit and Reset Buttons -->
-            <div class="btn-container">
-                <input type="submit" value="Register" id="btnSubmit" runat="server" />
-                <input type="reset" value="Clear" />
-            </div>
+           <div class="btn-container">
+    <input type="submit" value="Register" id="btnSubmit" runat="server" OnServerClick="btnSubmit_ServerClick" />
+    <input type="reset" value="Clear" />
+</div>
+
         </div>
     </form>
 </body>
