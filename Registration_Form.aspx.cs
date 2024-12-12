@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Web.UI;
 
@@ -122,7 +123,7 @@ namespace School_Project
 
                             Session["user_id"] = userId;
                             Session["password"] = password;
-
+                            con.Close();
                             ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Student registered successfully!');", true);
                         }
                         else
@@ -139,6 +140,10 @@ namespace School_Project
             catch (Exception ex)
             {
                 lblErrMsg.Text = "Unexpected error: " + ex.Message;
+            }
+            finally
+            {
+                Response.Redirect("Student_Credentials.aspx");
             }
         }
     }

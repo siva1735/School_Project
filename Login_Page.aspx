@@ -79,12 +79,18 @@
             <h2>Student Login</h2>
             <asp:Label ID="lblError" runat="server" CssClass="error-message" Visible="false"></asp:Label>
             <label for="txtUserID">User ID</label>
-            <asp:TextBox ID="txtUserID" runat="server" placeholder="Enter your User ID"></asp:TextBox>
+            <asp:TextBox ID="txt_UserID" runat="server" placeholder="Enter your User ID"></asp:TextBox>
 
             <label for="txtPassword">Password</label>
-            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="Enter your Password"></asp:TextBox>
-
+            <asp:TextBox ID="txt_Password" runat="server" TextMode="Password" placeholder="Enter your Password"></asp:TextBox>
+             <asp:Label ID="lbl_msg" ForeColor="red" runat="server"></asp:Label>
+            <br />
             <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
+            <br />
+            <br />
+            <center>
+                New user?<a href="Registration_Form.aspx">Sign Up</a>
+            </center>
         </div>
     </form>
 </body>
